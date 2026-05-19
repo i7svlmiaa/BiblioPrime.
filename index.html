@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria Online — Sua Biblioteca Digital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📚</span>
+        <span>BiblioPrime</span>
+      </a>
+      
+      <div class="search-bar">
+        <select class="search-select">
+          <option>Todos</option>
+          <option>Livros</option>
+          <option>E-books</option>
+          <option>Audiolivros</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Buscar livros, autores, ISBN...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+   <!-- Conta -->
+<a href="login.html" class="header-link">
+  <span>Olá, Faça login</span>
+  <strong>Conta e Listas</strong>
+</a>
+
+<!-- Devoluções -->
+<a href="devolucao.html" class="header-link">
+  <span>Devoluções</span>
+  <strong>e Pedidos</strong>
+</a>
+        <a href="carrinho.html" class="header-link">
+          <span class="cart-count">3</span>
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <strong>Carrinho</strong>
+        </a>
+      </div>
+    </div>
+    
+    <div class="sub-header">
+      <nav>
+        <a href="#"><i class="fas fa-bars"></i> Todos</a>
+        <a href="catalogo.html">Mais Vendidos</a>
+        <a href="catalogo.html">Lançamentos</a>
+        <a href="catalogo.html">Ofertas do Dia</a>
+        <a href="catalogo.html">Ficção Científica</a>
+        <a href="catalogo.html">Romance</a>
+        <a href="catalogo.html">Tecnologia</a>
+        <a href="catalogo.html">Negócios</a>
+        <a href="catalogo.html">Infantil</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Descubra Seu Próximo Livro Favorito</h1>
+        <p>Milhões de títulos com entrega rápida. E-books, audiolivros e edições exclusivas.</p>
+        <div class="hero-cta">
+          <a href="catalogo.html" class="btn btn-primary">
+            <i class="fas fa-book-open"></i> Explorar Catálogo
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500" alt="Coleção de Livros">
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="container">
+    <h2 class="section-title"><i class="fas fa-th-large"></i> Categorias Populares</h2>
+    <div class="categories-grid">
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">🚀</span>
+        <span class="category-name">Ficção Científica</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">❤️</span>
+        <span class="category-name">Romance</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">💻</span>
+        <span class="category-name">Tecnologia</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">📈</span>
+        <span class="category-name">Negócios</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">🎨</span>
+        <span class="category-name">Arte & Design</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">👶</span>
+        <span class="category-name">Infantil</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">🏛️</span>
+        <span class="category-name">História</span>
+      </a>
+      <a href="catalogo.html" class="category-item">
+        <span class="category-icon">🧠</span>
+        <span class="category-name">Psicologia</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- MAIS VENDIDOS -->
+  <section class="container">
+    <h2 class="section-title"><i class="fas fa-fire"></i> Mais Vendidos da Semana</h2>
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <span class="card-badge">-30%</span>
+        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Ficção Científica</div>
+          <h3 class="card-title">O Projeto Fênix</h3>
+          <p class="card-author">por Andy Weir</p>
+          <div class="card-rating">
+            <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <span class="rating-count">2.847 avaliações</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">R$ 48,93</span>
+            <span class="price-original">R$ 69,90</span>
+            <span class="price-discount">-30%</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Tecnologia</div>
+          <h3 class="card-title">Clean Code: A Handbook</h3>
+          <p class="card-author">por Robert C. Martin</p>
+          <div class="card-rating">
+            <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span class="rating-count">5.120 avaliações</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">R$ 89,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <span class="card-badge">Lançamento</span>
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Romance</div>
+          <h3 class="card-title">A Biblioteca da Meia-Noite</h3>
+          <p class="card-author">por Matt Haig</p>
+          <div class="card-rating">
+            <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+            <span class="rating-count">1.534 avaliações</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">R$ 54,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <span class="card-badge">-20%</span>
+        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Negócios</div>
+          <h3 class="card-title">A Mentalidade Antifragil</h3>
+          <p class="card-author">por Nassim Taleb</p>
+          <div class="card-rating">
+            <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <span class="rating-count">3.210 avaliações</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">R$ 63,92</span>
+            <span class="price-original">R$ 79,90</span>
+            <span class="price-discount">-20%</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROMOÇÕES -->
+  <section class="container">
+    <div class="promo-grid">
+      <div class="promo-card">
+        <h3><i class="fas fa-tablet-alt"></i> E-books em Oferta</h3>
+        <p>Até 70% de desconto em e-books best-sellers. Leia onde e quando quiser.</p>
+        <a href="catalogo.html" class="promo-link">Ver ofertas <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="promo-card">
+        <h3><i class="fas fa-headphones"></i> Audiolivros Premium</h3>
+        <p>Assine agora e tenha acesso ilimitado a milhares de audiolivros.</p>
+        <a href="#" class="promo-link">Experimente grátis <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="promo-card">
+        <h3><i class="fas fa-graduation-cap"></i> Universitários</h3>
+        <p>Descontos especiais em livros didáticos e materiais acadêmicos.</p>
+        <a href="catalogo.html" class="promo-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANÇAMENTOS -->
+  <section class="container">
+    <h2 class="section-title"><i class="fas fa-sparkles"></i> Lançamentos do Mês</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <span class="card-badge">Novo</span>
+        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Ficção</div>
+          <h3 class="card-title">O Homem Duplicado</h3>
+          <p class="card-author">por José Saramago</p>
+          <div class="card-price">
+            <span class="price-current">R$ 59,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Biografia</div>
+          <h3 class="card-title">Steve Jobs: A Biografia</h3>
+          <p class="card-author">por Walter Isaacson</p>
+          <div class="card-price">
+            <span class="price-current">R$ 74,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="card-badge">-15%</span>
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Psicologia</div>
+          <h3 class="card-title">Thinking, Fast and Slow</h3>
+          <p class="card-author">por Daniel Kahneman</p>
+          <div class="card-price">
+            <span class="price-current">R$ 67,92</span>
+            <span class="price-original">R$ 79,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400" alt="Livro" class="card-image">
+        <div class="card-content">
+          <div class="card-category">Fantasia</div>
+          <h3 class="card-title">O Nome do Vento</h3>
+          <p class="card-author">por Patrick Rothfuss</p>
+          <div class="card-price">
+            <span class="price-current">R$ 69,90</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-add-cart" onclick="window.location.href='carrinho.html'">
+              <i class="fas fa-shopping-cart"></i> Adicionar
+            </button>
+            <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Conheça-nos</h4>
+        <ul>
+          <li><a href="#">Sobre a LivrariaOnline</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ganhe Dinheiro</h4>
+        <ul>
+          <li><a href="#">Publique seus livros</a></li>
+          <li><a href="#">Seja um afiliado</a></li>
+          <li><a href="#">Anuncie seus produtos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Pagamento</h4>
+        <ul>
+          <li><a href="#">Cartões de Crédito</a></li>
+          <li><a href="#">Boleto Bancário</a></li>
+          <li><a href="#">Pix</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Sua Conta</a></li>
+          <li><a href="#">Frete e Entrega</a></li>
+          <li><a href="#">Devoluções</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> BiblioPrime. Todos os direitos reservados. Criado por Mirella Maria | <a href="#" style="color: #ddd;">Privacidade</a> | <a href="#" style="color: #ddd;">Termos</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

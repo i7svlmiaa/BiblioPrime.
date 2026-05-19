@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Projeto Fênix — BiblioPrime</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📚</span>
+        <span>BiblioPrime</span>
+      </a>
+      <div class="search-bar">
+        <select class="search-select">
+          <option>Todos</option>
+          <option>Livros</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Buscar...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+    <!-- Conta -->
+<a href="login.html" class="header-link">
+  <span>Olá, Faça login</span>
+  <strong>Conta e Listas</strong>
+</a>
+
+<!-- Devoluções -->
+<a href="devolucao.html" class="header-link">
+  <span>Devoluções</span>
+  <strong>e Pedidos</strong>
+</a>
+        <a href="carrinho.html" class="header-link">
+          <span class="cart-count">3</span>
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <strong>Carrinho</strong>
+        </a>
+      </div>
+    </div>
+    <div class="sub-header">
+      <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="#">Ficção Científica</a>
+        <a href="#">Mais Vendidos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 2rem;">
+    <!-- BREADCRUMB -->
+    <div style="margin-bottom: 1rem; color: var(--cor-texto-claro); font-size: 0.9rem;">
+      <a href="index.html" style="color: var(--cor-secundaria);">Início</a> / 
+      <a href="catalogo.html" style="color: var(--cor-secundaria);">Catálogo</a> / 
+      <a href="#" style="color: var(--cor-secundaria);">Ficção Científica</a> / 
+      <span>O Projeto Fênix</span>
+    </div>
+
+    <div class="detalhes-layout">
+      <!-- IMAGEM -->
+      <div class="detalhes-imagem">
+        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="O Projeto Fênix" id="mainImage">
+        <div class="thumbnail-list">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=100" class="thumbnail active" onclick="changeImage(this)">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=100" class="thumbnail" onclick="changeImage(this)">
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=100" class="thumbnail" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <!-- INFORMAÇÕES -->
+      <div class="detalhes-info">
+        <div class="card-category">Ficção Científica</div>
+        <h1>O Projeto Fênix</h1>
+        <div class="detalhes-meta">
+          <span>por <strong>Andy Weir</strong></span> | 
+          <span>Editora: Intrínseca</span> | 
+          <span>ISBN: 978-6555600290</span>
+        </div>
+        
+        <div class="card-rating" style="font-size: 1.1rem;">
+          <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+          <span>4.7 de 5 estrelas</span>
+          <span style="color: var(--cor-texto-claro);">| 2.847 avaliações</span>
+        </div>
+
+        <div class="detalhes-preco">
+          <div class="preco-principal">R$ 48,93</div>
+          <div style="color: var(--cor-texto-claro); margin-top: 0.5rem;">
+            De: <span style="text-decoration: line-through;">R$ 69,90</span> 
+            <span style="color: var(--cor-erro); font-weight: 600;">Você economiza: R$ 20,97 (30%)</span>
+          </div>
+          <div style="margin-top: 1rem; color: var(--cor-sucesso);">
+            <i class="fas fa-check-circle"></i> Em estoque. Envio imediato.
+          </div>
+          <div style="margin-top: 0.5rem; color: var(--cor-texto-claro); font-size: 0.9rem;">
+            <i class="fas fa-truck"></i> Frete GRÁTIS para pedidos acima de R$ 79
+          </div>
+        </div>
+
+        <div class="detalhes-acoes">
+          <div class="quantidade-selector">
+            <button onclick="changeQty(-1)">-</button>
+            <input type="number" value="1" min="1" id="qty">
+            <button onclick="changeQty(1)">+</button>
+          </div>
+          <button class="btn btn-primary" style="flex: 1;" onclick="window.location.href='carrinho.html'">
+            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+          </button>
+          <button class="btn btn-secondary">
+            <i class="fas fa-bolt"></i> Comprar Agora
+          </button>
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showTab('desc')">Descrição</button>
+            <button class="tab-btn" onclick="showTab('detalhes')">Detalhes</button>
+            <button class="tab-btn" onclick="showTab('avaliacoes')">Avaliações</button>
+          </div>
+          
+          <div id="desc" class="tab-content active">
+            <p>Ryland Grace é o único sobrevivente em uma missão desesperada — e, se ele falhar, a humanidade e a própria Terra estarão condenadas.</p>
+            <p style="margin-top: 1rem;">Ele não sabe disso. Ele nem mesmo consegue se lembrar de seu próprio nome, muito menos da natureza de sua missão ou de como cumpri-la. Tudo o que ele sabe é que dormiu por muito, muito tempo. E acordou sozinho em uma nave espacial.</p>
+            <p style="margin-top: 1rem;">Com sua memória fragmentada e sua tripulação morta, Ryland precisa descobrir quem ele é, por que está ali e como salvar a humanidade antes que seja tarde demais.</p>
+          </div>
+          
+          <div id="detalhes" class="tab-content">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro); width: 40%;">Editora</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">Intrínseca</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro);">Idioma</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">Português</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro);">Páginas</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">496</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro);">ISBN-10</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">6555600295</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro);">Dimensões</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">23 x 16 x 3 cm</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.8rem 0; color: var(--cor-texto-claro);">Peso</td>
+                <td style="padding: 0.8rem 0; font-weight: 500;">680g</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div id="avaliacoes" class="tab-content">
+            <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 3rem; font-weight: 700;">4.7</div>
+                <div class="stars" style="font-size: 1.2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <div style="color: var(--cor-texto-claro);">2.847 avaliações</div>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                  <span style="width: 30px;">5⭐</span>
+                  <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 78%; height: 100%; background: var(--cor-destaque);"></div>
+                  </div>
+                  <span style="width: 40px; text-align: right; color: var(--cor-texto-claro); font-size: 0.85rem;">78%</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                  <span style="width: 30px;">4⭐</span>
+                  <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 15%; height: 100%; background: var(--cor-destaque);"></div>
+                  </div>
+                  <span style="width: 40px; text-align: right; color: var(--cor-texto-claro); font-size: 0.85rem;">15%</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                  <span style="width: 30px;">3⭐</span>
+                  <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 4%; height: 100%; background: var(--cor-destaque);"></div>
+                  </div>
+                  <span style="width: 40px; text-align: right; color: var(--cor-texto-claro); font-size: 0.85rem;">4%</span>
+                </div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid #eee; padding-top: 1.5rem;">
+              <h4 style="margin-bottom: 1rem;">Principais avaliações</h4>
+              <div style="margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <strong>Maria S.</strong>
+                  <span style="color: var(--cor-texto-claro); font-size: 0.85rem;">15/03/2026</span>
+                </div>
+                <div class="stars" style="margin-bottom: 0.5rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="color: var(--cor-texto);">Incrível! Andy Weir não decepciona. A narrativa é envolvente do início ao fim. Recomendo demais!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Conheça-nos</h4>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Frete</a></li>
+          <li><a href="#">Devoluções</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> BiblioPrime. Todos os direitos reservados. Criado por Mirella Maria</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

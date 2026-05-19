@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo —  BiblioPrime</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER (igual ao index) -->
+  <header class="header">
+    <div class="header-top">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📚</span>
+        <span>BiblioPrime</span>
+      </a>
+      <div class="search-bar">
+        <select class="search-select">
+          <option>Todos</option>
+          <option>Livros</option>
+          <option>E-books</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Buscar no catálogo...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <!-- Conta -->
+<a href="login.html" class="header-link">
+  <span>Olá, Faça login</span>
+  <strong>Conta e Listas</strong>
+</a>
+
+<!-- Devoluções -->
+<a href="devolucao.html" class="header-link">
+  <span>Devoluções</span>
+  <strong>e Pedidos</strong>
+</a>
+        <a href="carrinho.html" class="header-link">
+          <span class="cart-count">3</span>
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <strong>Carrinho</strong>
+        </a>
+      </div>
+    </div>
+    <div class="sub-header">
+      <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="#">Mais Vendidos</a>
+        <a href="#">Lançamentos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Ficção</a>
+        <a href="#">Tecnologia</a>
+        <a href="#">Negócios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 2rem;">
+    <div class="catalogo-layout">
+      <!-- SIDEBAR FILTROS -->
+      <aside class="sidebar">
+        <h3><i class="fas fa-filter"></i> Filtros</h3>
+        
+        <div class="filter-group">
+          <h4>Categorias</h4>
+          <div class="filter-option">
+            <input type="checkbox" id="cat1" checked>
+            <label for="cat1">Todos (1.247)</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="cat2">
+            <label for="cat2">Ficção (342)</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="cat3">
+            <label for="cat3">Tecnologia (198)</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="cat4">
+            <label for="cat4">Negócios (156)</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="cat5">
+            <label for="cat5">Romance (287)</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Preço</h4>
+          <div class="price-range">
+            <input type="number" placeholder="Min" value="0">
+            <span>-</span>
+            <input type="number" placeholder="Max" value="500">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Avaliação</h4>
+          <div class="filter-option">
+            <input type="radio" name="rating" id="r5">
+            <label for="r5">⭐⭐⭐⭐⭐ 5 estrelas</label>
+          </div>
+          <div class="filter-option">
+            <input type="radio" name="rating" id="r4">
+            <label for="r4">⭐⭐⭐⭐ 4+ estrelas</label>
+          </div>
+          <div class="filter-option">
+            <input type="radio" name="rating" id="r3">
+            <label for="r3">⭐⭐⭐ 3+ estrelas</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Formato</h4>
+          <div class="filter-option">
+            <input type="checkbox" id="fmt1">
+            <label for="fmt1">Capa Dura</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="fmt2">
+            <label for="fmt2">Capa Comum</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="fmt3">
+            <label for="fmt3">E-book</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="fmt4">
+            <label for="fmt4">Audiolivro</label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTEÚDO -->
+      <div>
+        <div class="sort-bar">
+          <span><strong>1.247</strong> resultados encontrados</span>
+          <div>
+            <label>Ordenar por:</label>
+            <select class="sort-select">
+              <option>Mais relevantes</option>
+              <option>Preço: Menor → Maior</option>
+              <option>Preço: Maior → Menor</option>
+              <option>Mais vendidos</option>
+              <option>Mais avaliados</option>
+              <option>Lançamentos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Cards do catálogo (8 livros) -->
+          <article class="card">
+            <span class="card-badge">-25%</span>
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Ficção Científica</div>
+              <h3 class="card-title">O Projeto Fênix</h3>
+              <p class="card-author">Andy Weir</p>
+              <div class="card-rating">
+                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                <span class="rating-count">2.847</span>
+              </div>
+              <div class="card-price">
+                <span class="price-current">R$ 48,93</span>
+                <span class="price-original">R$ 69,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Tecnologia</div>
+              <h3 class="card-title">Clean Code</h3>
+              <p class="card-author">Robert C. Martin</p>
+              <div class="card-rating">
+                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <span class="rating-count">5.120</span>
+              </div>
+              <div class="card-price">
+                <span class="price-current">R$ 89,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="card-badge">Novo</span>
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Romance</div>
+              <h3 class="card-title">A Biblioteca da Meia-Noite</h3>
+              <p class="card-author">Matt Haig</p>
+              <div class="card-rating">
+                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                <span class="rating-count">1.534</span>
+              </div>
+              <div class="card-price">
+                <span class="price-current">R$ 54,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Negócios</div>
+              <h3 class="card-title">A Mentalidade Antifragil</h3>
+              <p class="card-author">Nassim Taleb</p>
+              <div class="card-rating">
+                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                <span class="rating-count">3.210</span>
+              </div>
+              <div class="card-price">
+                <span class="price-current">R$ 63,92</span>
+                <span class="price-original">R$ 79,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Ficção</div>
+              <h3 class="card-title">O Homem Duplicado</h3>
+              <p class="card-author">José Saramago</p>
+              <div class="card-price">
+                <span class="price-current">R$ 59,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="card-badge">-40%</span>
+            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Biografia</div>
+              <h3 class="card-title">Steve Jobs: A Biografia</h3>
+              <p class="card-author">Walter Isaacson</p>
+              <div class="card-price">
+                <span class="price-current">R$ 44,94</span>
+                <span class="price-original">R$ 74,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Psicologia</div>
+              <h3 class="card-title">Thinking, Fast and Slow</h3>
+              <p class="card-author">Daniel Kahneman</p>
+              <div class="card-price">
+                <span class="price-current">R$ 67,92</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400" alt="Livro" class="card-image">
+            <div class="card-content">
+              <div class="card-category">Fantasia</div>
+              <h3 class="card-title">O Nome do Vento</h3>
+              <p class="card-author">Patrick Rothfuss</p>
+              <div class="card-price">
+                <span class="price-current">R$ 69,90</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (igual ao index) -->
+  <footer class="footer">
+
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Conheça-nos</h4>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Frete</a></li>
+          <li><a href="#">Devoluções</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Pagamento</h4>
+        <ul>
+          <li><a href="#">Cartões</a></li>
+          <li><a href="#">Pix</a></li>
+          <li><a href="#">Boleto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> BiblioPrime. Todos os direitos reservados. Criado por Mirella Maria</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
